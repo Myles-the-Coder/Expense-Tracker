@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+:root{
+  --box-shadow:rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 3rem auto;
+  width: 35rem;
+
+}
+.title {
+  margin: 2rem;
+}
+
+.container h1 {
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.container h4 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 1rem;
+  margin: 4rem 0 1rem
+}
+
+.inc-exp-container {
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin: 0.5rem 0
+}
+
+.money.plus {
+  color: lightgreen;
+}
+
+.money.minus {
+  color: red;
+}
+
+label {
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+input[type=text], input[type=number] {
+  border: 0.1rem solid #dedede;
+  border-radius: 0.2rem;
+  display: block;
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.list {
+  margin-bottom: 4rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li {
+  box-shadow: var(--box-shadow);
+  background-color: #fff;
+  font-size: 1.3rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem;
+  margin: 1rem 0
+}
+
+.list li.minus {
+  border-right: 0.5rem solid red;
+}
+
+.list li.plus {
+  border-right: 0.5rem solid lightgreen;
+}
+
+.btn.delete {
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .btn.delete {
+  opacity: 1;
+}
+
+.form-control {
+  background-color: #f7f7f7;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: none;
+  font-size: 1.3rem
+}
+
+.form-control label {
+  margin: 1rem 0;
+}
+
+.btn.transaction {
+  background-color: #9063cd;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  display: block;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: .8rem;
+}
+
+.btn.transaction:focus,
+.btn.delete:focus,
+.btn.close:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn.transaction:active {
+  transform: scale(.99);
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.message-container.close {
+  opacity: 0;
+}
+
+.message-container h3 {
+  border: none;
+}
+
+.btn.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #e74c3c;
+  color: #fff;
+  transform: translate(-100%, 50%);
+}
